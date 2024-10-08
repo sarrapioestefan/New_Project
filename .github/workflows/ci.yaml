@@ -26,4 +26,4 @@ jobs:
       run: docker run c-app:${{ github.sha }}
 
     - name: Run Code Linting
-      run: docker run c-app:${{ github.sha }} cppcheck .
+      run: docker run c-app:${{ github.sha }} cppcheck --enable=all --inconclusive --verbose .
