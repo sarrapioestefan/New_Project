@@ -1,0 +1,29 @@
+name: CI Pipeline for C Project
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Set up Docker Buildx
+      uses: docker/setup-buildx-action@v2
+
+    - name: Build Docker image
+      run: docker build -t c-app .
+
+    - name: Run Docker container
+      run: docker run c-app
+
+    - name: Test the code
+      run: docker run c-app ./tests/test_suite
