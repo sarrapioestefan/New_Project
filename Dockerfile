@@ -18,7 +18,7 @@ WORKDIR /usr/src/app
 COPY . .
 
 # Run build command (example: make)
-CMD ["make"]
+RUN make
 
 # Run build command (example: make)
 CMD ["./main"]
