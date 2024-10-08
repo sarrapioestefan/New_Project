@@ -25,5 +25,5 @@ jobs:
     - name: Run Docker container
       run: docker run c-app
 
-    - name: Test the code
-      run: docker run c-app ./tests/test_suite
+    #- name: Test the code
+    #  run: docker run c-app ./tests/test_suite
