@@ -19,3 +19,6 @@ COPY . .
 
 # Run build command (example: make)
 CMD ["make"]
+
+# Run build command (example: make)
+CMD ["./main"]
