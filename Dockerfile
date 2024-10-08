@@ -1,6 +1,8 @@
 # Use an official Ubuntu image as a base
 FROM ubuntu:20.04
 
+ENV DEBIAN_FRONTEND=noninteractive
+
 # Install essential packages and build tools
 RUN apt-get update && apt-get install -y \
     build-essential \
